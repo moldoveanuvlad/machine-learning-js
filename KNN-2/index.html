@@ -1,0 +1,65 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>KNN part 2</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
+  </head>
+
+  <body>
+    <p>Intro to Machine Learning in JS part 2: KNN algorithm</p>
+    <div class="container">
+      <div class="soccer-field">
+        <img src="assets/Soccer_field.jpg" alt="">
+        <img id="messi" src="assets/messi.png" alt="">
+        <div class="scoreboard">
+          <h3>GOALS: </h3><span id="goals">0</span>
+          <h3>DEFENDS: </h3><span id="misses">0</span>
+          <h3>Goalkeeper accuracy: </h3><span id="accuracy">0</span>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="soccer-goal">
+          <div class="circle-overlay">
+            <div class="circle LU"></div>
+            <div class="circle MU"></div>
+            <div class="circle RU"></div>
+            <div class="circle LC"></div>
+            <div class="circle MC"></div>
+            <div class="circle RC"></div>
+            <div class="circle LD"></div>
+            <div class="circle MD"></div>
+            <div class="circle RD"></div>
+          </div>
+          <img src="assets/Soccer_goal.png" alt="">
+        </div>
+        <div class="info">
+          <div class="top">
+            <ul style="width:300px">
+              <h5>Stats</h5>
+              <li>Goalkeeper position: <span id="keeper"></span> </li>
+              <li>Shoot direction: <span id="direction"></span></li>
+            </ul>
+            <div class="kick-info">
+              <ul>
+                <h5>Free kick position</h5>
+                <li>x: <input type="text" class="x-position"/></li>
+                <li>y: <input type="text" class="y-position"/></li>
+              </ul>
+            </div>
+        </div>
+          <div class="controls">
+            <button onclick="executeFreeKick()">Random Shoot</button>
+            <button onclick="executeUpgradedFreeKick()">Learned Shoot</button>
+            <button onclick="massRandomShooting(100)">100 Random Shoots</button>
+            <button onclick="massTrainedShooting(100)">100 Trained Shoots</button>
+          </div>
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

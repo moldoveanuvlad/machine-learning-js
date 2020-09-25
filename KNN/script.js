@@ -1,4 +1,3 @@
-
 const colors = ['#e01a4fff', '#f9c22eff', '#53b3cbff']
 const dataset = new Array(300)
 const trainerSet = []
